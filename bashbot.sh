@@ -41,7 +41,7 @@ ACTION_URL=$URL'/sendChatAction'
 FORWARD_URL=$URL'/forwardMessage'
 INLINE_QUERY=$URL'/answerInlineQuery'
 ME_URL=$URL'/getMe'
-ME= $(curl -s $ME_URL | ./JSON.sh/JSON.sh -s | egrep '\["result","username"\]' | cut -f 2 | cut -d '"' -f 2)
+ME=$(curl -s $ME_URL | ./JSON.sh/JSON.sh -s | egrep '\["result","username"\]' | cut -f 2 | cut -d '"' -f 2)
 
 
 FILE_URL='https://api.telegram.org/file/bot'$TOKEN'/'
@@ -365,8 +365,9 @@ case "$1" in
 		for f in $(cat count);do send_message ${f//COUNT} "$*"; $sleep;done
 		;;
 	"start")
-
+		echo "Bot started . Send /start to bot to initiate discussion"
 		bash $SCRIPT startbot
+
 		;;
 	"kill")
 		kill -9 `ps aux | grep $SCRIPT | grep -v grep | awk '{print $2}'`
