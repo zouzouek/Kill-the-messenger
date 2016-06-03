@@ -19,13 +19,12 @@ Then text your bot with the command /start.
 ### Usage
 
 * Create a file called token and place your bot token inside
-*  run `bash bashbot start` inside the project directory
+*  run `bash bashbot.sh start` inside the project directory
 *  Send `/start` Message to your bot .( In this case @international_swearing_bot)
-*  Teach new swears to the bot by running `bash writeFile.sh ¨<language>¨ ¨<swear>¨`
+*  Teach new swears to the bot or view existing ones by running `./main_ui` 
 *  Each word added triggers a broadcast informing all users that new language has been learned
 
 ## To Do
 
-* GUI application to interact with writeFile.sh and make it easier to add languages
-* Localise the GUI application to arabic language.
+* Localise the GUI application to arabic language (attempted but non functional.
 * Create an xinetd configuartion to enable running the bot as a daemon
