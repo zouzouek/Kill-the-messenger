@@ -2,6 +2,7 @@ install: main_ui-ar.mo
 	install writeFile.sh readFile.sh main_ui /usr/local/bin
 	which gdialog >/dev/null 2>&1 || install gdialog /usr/local/bin
 	install main_ui-ar.mo /usr/share/locale/ar/LC_MESSAGES/main_ui.mo
+	chmod +x swear
 
 main_ui.pot: main_ui
 	xgettext -o main_ui.pot -L Shell main_ui
